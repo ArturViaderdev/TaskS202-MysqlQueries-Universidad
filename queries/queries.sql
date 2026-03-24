@@ -30,17 +30,15 @@ SELECT DISTINCT p.nombre,p.apellido1,p.apellido2 FROM persona AS p JOIN alumno_s
 SELECT d.nombre AS departamento,p.apellido1,p.apellido2,p.nombre FROM persona as p JOIN profesor AS pr ON p.id = pr.id_profesor LEFT JOIN departamento AS d ON pr.id_departamento = d.id ORDER BY d.nombre,p.apellido1,p.apellido2,p.nombre;
 
 -- 11. Retorna un llistat amb els professors/es que no estan associats a un departament. (apellido1, apellido2, nombre)
-SELECT p.apellido1,p.apellido2,p.nombre,pr FROM persona AS p LEFT JOIN profesor AS pr ON pr.id_profesor = p.id WHERE p.tipo='profesor' AND ISNULL(pr.id_departamento);
+SELECT p.apellido1,p.apellido2,p.nombre FROM persona AS p LEFT JOIN profesor AS pr ON pr.id_profesor = p.id WHERE p.tipo='profesor' AND ISNULL(pr.id_departamento);
 
 -- 12. Retorna un llistat amb els departaments que no tenen professors/es associats. (nombre)
 SELECT d.nombre FROM departamento AS d LEFT JOIN profesor AS p ON p.id_departamento=d.id WHERE ISNULL(id_profesor);
 
 -- 13. Retorna un llistat amb els professors/es que no imparteixen cap assignatura. (apellido1, apellido2, nombre)
--- No coincideix ordre
-SELECT p.apellido1,p.apellido2,p.nombre FROM persona AS p LEFT JOIN asignatura AS a ON p.id=a.id_profesor WHERE ISNULL(a.id) AND p.tipo ='profesor';
+SELECT p.apellido1,p.apellido2,p.nombre FROM persona AS p LEFT JOIN asignatura AS a ON p.id=a.id_profesor WHERE ISNULL(a.id_profesor) AND p.tipo ='profesor' ORDER BY p.apellido1,p.apellido2,p.nombre;
 
 -- 14. Retorna un llistat amb les assignatures que no tenen un professor/a assignat. (id, nombre)
--- Revisa
 SELECT nombre FROM asignatura WHERE ISNULL(id_profesor);
 
 -- 15. Retorna un llistat amb tots els departaments que no han impartit assignatures en cap curs escolar. (nombre)
