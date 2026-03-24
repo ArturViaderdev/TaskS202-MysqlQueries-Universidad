@@ -36,14 +36,13 @@ SELECT p.apellido1,p.apellido2,p.nombre FROM persona AS p LEFT JOIN profesor AS 
 SELECT d.nombre FROM departamento AS d LEFT JOIN profesor AS p ON p.id_departamento=d.id WHERE ISNULL(id_profesor);
 
 -- 13. Retorna un llistat amb els professors/es que no imparteixen cap assignatura. (apellido1, apellido2, nombre)
-SELECT p.apellido1,p.apellido2,p.nombre FROM persona AS p LEFT JOIN asignatura AS a ON p.id=a.id_profesor WHERE a.id_profesor IS NULL AND p.tipo ='profesor' ORDER BY p.apellido1,p.apellido2,p.nombre;
---no ordre
+SELECT p.apellido1,p.apellido2,p.nombre FROM persona AS p LEFT JOIN asignatura AS a ON p.id=a.id_profesor WHERE a.id_profesor IS NULL AND p.tipo ='profesor' GROUP BY p.id,p.apellido1,p.apellido2,p.nombre ORDER BY p.id;
 
 -- 14. Retorna un llistat amb les assignatures que no tenen un professor/a assignat. (id, nombre)
 SELECT a.id,a.nombre FROM asignatura AS a LEFT JOIN profesor AS p ON a.id_profesor = p.id_profesor WHERE a.id_profesor IS NULL;
 
 -- 15. Retorna un llistat amb tots els departaments que no han impartit assignatures en cap curs escolar. (nombre)
-SELECT DISTINCT d.nombre FROM departamento AS d LEFT JOIN profesor AS p ON d.id = p.id_departamento LEFT JOIN asignatura AS a ON p.id_profesor = a.id_profesor LEFT JOIN alumno_se_matricula_asignatura AS m ON a.id = m.id_asignatura LEFT JOIN curso_escolar AS c ON m.id_curso_escolar = c.id WHERE c.id IS NULL ORDER BY d.nombre;
+SELECT DISTINCT d.nombre FROM departamento AS d LEFT JOIN profesor AS p ON d.id = p.id_departamento LEFT JOIN asignatura AS a ON p.id_profesor = a.id_profesor LEFT JOIN alumno_se_matricula_asignatura AS m ON a.id = m.id_asignatura LEFT JOIN curso_escolar AS c ON m.id_curso_escolar = c.id WHERE c.id IS NULL;
 
 -- 16. Retorna el nombre total d'alumnes que hi ha. (total)
 SELECT count(id) AS total FROM persona WHERE tipo='alumno';
@@ -70,7 +69,7 @@ SELECT g.nombre AS grau,a.tipo,SUM(a.creditos) AS total_creditos FROM grado AS g
 SELECT c.anyo_inicio,COUNT(DISTINCT(a.id_alumno)) AS total FROM curso_escolar AS c JOIN alumno_se_matricula_asignatura AS a ON c.id=a.id_curso_escolar GROUP BY c.anyo_inicio;
 
 -- 24. Retorna un llistat amb el nombre d'assignatures que imparteix cada professor/a. El llistat ha de tenir en compte aquells professors/es que no imparteixen cap assignatura. El resultat mostrarà cinc columnes: id, nom, primer cognom, segon cognom i nombre d'assignatures. El resultat estarà ordenat de major a menor pel nombre d'assignatures. (id, nombre, apellido1, apellido2, total)
-SELECT p.id,p.nombre,p.apellido1,p.apellido2,COUNT(a.id) AS total FROM persona AS p LEFT JOIN asignatura AS a ON p.id = a.id_profesor WHERE p.tipo='profesor' GROUP BY p.id  ORDER BY total DESC;
+SELECT p.id,p.nombre,p.apellido1,p.apellido2,COUNT(a.id) AS total FROM persona AS p LEFT JOIN asignatura AS a ON p.id = a.id_profesor WHERE p.tipo='profesor' GROUP BY p.id,p.nombre,p.apellido1.p.apellido2  ORDER BY total DESC, p.id ASC;
 
 -- 25. Retorna totes les dades de l'alumne/a més jove. (*)
 SELECT * FROM persona WHERE tipo='alumno' ORDER BY fecha_nacimiento DESC LIMIT 1;
