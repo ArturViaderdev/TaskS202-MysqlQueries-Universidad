@@ -6,7 +6,7 @@
 
 ## ✅ Query 1: Correcto
 
-⏱ Tiempo: 0.38 ms
+⏱ Tiempo: 0.40 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -20,14 +20,14 @@
 
 ## ✅ Query 3: Correcto
 
-⏱ Tiempo: 0.34 ms
+⏱ Tiempo: 0.32 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 4: Correcto
 
-⏱ Tiempo: 0.31 ms
+⏱ Tiempo: 0.34 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -53,15 +53,15 @@
 +Técnicas instrumentales básicas
 ```
 
-⏱ Tiempo: 0.33 ms
+⏱ Tiempo: 0.35 ms
 ✅ Se usó índice(s) en la consulta: id_grado
 
 ---
 
 ## ✅ Query 6: Correcto
 
-⏱ Tiempo: 0.39 ms
-✅ Se usó índice(s) en la consulta: PRIMARY, PRIMARY,id_departamento
+⏱ Tiempo: 0.40 ms
+✅ Se usó índice(s) en la consulta: PRIMARY,id_departamento, PRIMARY
 
 ---
 
@@ -111,14 +111,14 @@
 
 ## ✅ Query 8: Correcto
 
-⏱ Tiempo: 0.40 ms
+⏱ Tiempo: 0.43 ms
 ✅ Se usó índice(s) en la consulta: PRIMARY,id_departamento, PRIMARY, id_profesor,id_grado
 
 ---
 
 ## ✅ Query 9: Correcto
 
-⏱ Tiempo: 0.39 ms
+⏱ Tiempo: 0.42 ms
 ✅ Se usó índice(s) en la consulta: PRIMARY,id_curso_escolar, PRIMARY
 
 ---
@@ -135,7 +135,7 @@
  Economía y Empresa | Lemke | Rutherford | Cristina
 ```
 
-⏱ Tiempo: 0.42 ms
+⏱ Tiempo: 0.44 ms
 ✅ Se usó índice(s) en la consulta: PRIMARY
 
 ---
@@ -173,7 +173,7 @@
 +24.00 | 85135690V | Sonia | Gea | Ruiz | Almería | C/ Mercurio | 678812017 | 1995-04-13 | M | alumno
 ```
 
-⏱ Tiempo: 0.35 ms
+⏱ Tiempo: 0.32 ms
 🔍 No se usó ningún índice en esta consulta.
 
 🚨 **Problemas detectados:**
@@ -183,7 +183,7 @@
 
 ## ✅ Query 12: Correcto
 
-⏱ Tiempo: 0.33 ms
+⏱ Tiempo: 0.34 ms
 ✅ Se usó índice(s) en la consulta: id_departamento
 
 ---
@@ -209,7 +209,7 @@
  Schowalter | Muller | Francesca
 ```
 
-⏱ Tiempo: 0.34 ms
+⏱ Tiempo: 0.36 ms
 ✅ Se usó índice(s) en la consulta: id_profesor
 
 ---
@@ -309,7 +309,7 @@
 +24.00 | 85135690V | Sonia | Gea | Ruiz | Almería | C/ Mercurio | 678812017 | 1995-04-13 | M | alumno
 ```
 
-⏱ Tiempo: 0.29 ms
+⏱ Tiempo: 0.31 ms
 🔍 No se usó ningún índice en esta consulta.
 
 🚨 **Problemas detectados:**
@@ -359,7 +359,7 @@
 +24.00 | 85135690V | Sonia | Gea | Ruiz | Almería | C/ Mercurio | 678812017 | 1995-04-13 | M | alumno
 ```
 
-⏱ Tiempo: 0.35 ms
+⏱ Tiempo: 0.31 ms
 🔍 No se usó ningún índice en esta consulta.
 
 🚨 **Problemas detectados:**
@@ -369,28 +369,28 @@
 
 ## ✅ Query 16: Correcto
 
-⏱ Tiempo: 0.30 ms
+⏱ Tiempo: 0.34 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 17: Correcto
 
-⏱ Tiempo: 0.30 ms
+⏱ Tiempo: 0.32 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 18: Correcto
 
-⏱ Tiempo: 0.33 ms
+⏱ Tiempo: 0.35 ms
 ✅ Se usó índice(s) en la consulta: id_departamento, PRIMARY
 
 ---
 
 ## ✅ Query 19: Correcto
 
-⏱ Tiempo: 0.33 ms
+⏱ Tiempo: 0.34 ms
 ✅ Se usó índice(s) en la consulta: id_departamento
 
 ---
@@ -407,7 +407,7 @@
  Grado en Ingeniería Agrícola (Plan 2015) | 0.00
 ```
 
-⏱ Tiempo: 0.36 ms
+⏱ Tiempo: 0.35 ms
 ✅ Se usó índice(s) en la consulta: id_grado
 
 ---
