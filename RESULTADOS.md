@@ -2,25 +2,25 @@
 
 
 ## 📈 Resumen
-✅ 12 correctas de 22 queries
+✅ 16 correctas de 26 queries
 
 ## ✅ Query 1: Correcto
 
-⏱ Tiempo: 0.40 ms
+⏱ Tiempo: 0.47 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 2: Correcto
 
-⏱ Tiempo: 0.33 ms
+⏱ Tiempo: 0.37 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 3: Correcto
 
-⏱ Tiempo: 0.32 ms
+⏱ Tiempo: 0.35 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -53,73 +53,36 @@
 +Técnicas instrumentales básicas
 ```
 
-⏱ Tiempo: 0.35 ms
+⏱ Tiempo: 0.38 ms
 ✅ Se usó índice(s) en la consulta: id_grado
 
 ---
 
 ## ✅ Query 6: Correcto
 
-⏱ Tiempo: 0.40 ms
+⏱ Tiempo: 0.46 ms
 ✅ Se usó índice(s) en la consulta: PRIMARY,id_departamento, PRIMARY
 
 ---
 
-## ❌ Query 7: Incorrecto
-```diff
---- 
-+++ 
-@@ -1,4 +1,25 @@
--nombre | anyo_inicio | anyo_fin
--Álgegra lineal y matemática discreta | 2014.00 | 2015.00
--Cálculo | 2014.00 | 2015.00
--Física para informática | 2014.00 | 2015.00
-+id | nif | nombre | apellido1 | apellido2 | ciudad | direccion | telefono | fecha_nacimiento | sexo | tipo
-+1.00 | 26902806M | Salvador | Sánchez | Pérez | Almería | C/ Real del barrio alto | 950254837 | 1991-03-28 | H | alumno
-+2.00 | 89542419S | Juan | Saez | Vega | Almería | C/ Mercurio | 618253876 | 1992-08-08 | H | alumno
-+3.00 | 11105554G | Zoe | Ramirez | Gea | Almería | C/ Marte | 618223876 | 1979-08-19 | M | profesor
-+4.00 | 17105885A | Pedro | Heller | Pagac | Almería | C/ Estrella fugaz | NULL | 2000-10-05 | H | alumno
-+5.00 | 38223286T | David | Schmidt | Fisher | Almería | C/ Venus | 678516294 | 1978-01-19 | H | profesor
-+6.00 | 04233869Y | José | Koss | Bayer | Almería | C/ Júpiter | 628349590 | 1998-01-28 | H | alumno
-+7.00 | 97258166K | Ismael | Strosin | Turcotte | Almería | C/ Neptuno | NULL | 1999-05-24 | H | alumno
-+8.00 | 79503962T | Cristina | Lemke | Rutherford | Almería | C/ Saturno | 669162534 | 1977-08-21 | M | profesor
-+9.00 | 82842571K | Ramón | Herzog | Tremblay | Almería | C/ Urano | 626351429 | 1996-11-21 | H | alumno
-+10.00 | 61142000L | Esther | Spencer | Lakin | Almería | C/ Plutón | NULL | 1977-05-19 | M | profesor
-+11.00 | 46900725E | Daniel | Herman | Pacocha | Almería | C/ Andarax | 679837625 | 1997-04-26 | H | alumno
-+12.00 | 85366986W | Carmen | Streich | Hirthe | Almería | C/ Almanzora | NULL | 1971-04-29 | M | profesor
-+13.00 | 73571384L | Alfredo | Stiedemann | Morissette | Almería | C/ Guadalquivir | 950896725 | 1980-02-01 | H | profesor
-+14.00 | 82937751G | Manolo | Hamill | Kozey | Almería | C/ Duero | 950263514 | 1977-01-02 | H | profesor
-+15.00 | 80502866Z | Alejandro | Kohler | Schoen | Almería | C/ Tajo | 668726354 | 1980-03-14 | H | profesor
-+16.00 | 10485008K | Antonio | Fahey | Considine | Almería | C/ Sierra de los Filabres | NULL | 1982-03-18 | H | profesor
-+17.00 | 85869555K | Guillermo | Ruecker | Upton | Almería | C/ Sierra de Gádor | NULL | 1973-05-05 | H | profesor
-+18.00 | 04326833G | Micaela | Monahan | Murray | Almería | C/ Veleta | 662765413 | 1976-02-25 | H | profesor
-+19.00 | 11578526G | Inma | Lakin | Yundt | Almería | C/ Picos de Europa | 678652431 | 1998-09-01 | M | alumno
-+20.00 | 79221403L | Francesca | Schowalter | Muller | Almería | C/ Quinto pino | NULL | 1980-10-31 | H | profesor
-+21.00 | 79089577Y | Juan | Gutiérrez | López | Almería | C/ Los pinos | 678652431 | 1998-01-01 | H | alumno
-+22.00 | 41491230N | Antonio | Domínguez | Guerrero | Almería | C/ Cabo de Gata | 626652498 | 1999-02-11 | H | alumno
-+23.00 | 64753215G | Irene | Hernández | Martínez | Almería | C/ Zapillo | 628452384 | 1996-03-12 | M | alumno
-+24.00 | 85135690V | Sonia | Gea | Ruiz | Almería | C/ Mercurio | 678812017 | 1995-04-13 | M | alumno
-```
+## ✅ Query 7: Correcto
 
-⏱ Tiempo: 0.31 ms
-🔍 No se usó ningún índice en esta consulta.
-
-🚨 **Problemas detectados:**
-⚠️ Evitar `SELECT *`. Usar solo las columnas necesarias.
+⏱ Tiempo: 0.63 ms
+✅ Se usó índice(s) en la consulta: PRIMARY,nif, PRIMARY,id_asignatura,id_curso_escolar, PRIMARY
 
 ---
 
 ## ✅ Query 8: Correcto
 
 ⏱ Tiempo: 0.43 ms
-✅ Se usó índice(s) en la consulta: PRIMARY,id_departamento, PRIMARY, id_profesor,id_grado
+✅ Se usó índice(s) en la consulta: id_profesor,id_grado, PRIMARY,id_departamento, PRIMARY
 
 ---
 
 ## ✅ Query 9: Correcto
 
-⏱ Tiempo: 0.42 ms
-✅ Se usó índice(s) en la consulta: PRIMARY,id_curso_escolar, PRIMARY
+⏱ Tiempo: 0.40 ms
+✅ Se usó índice(s) en la consulta: PRIMARY, PRIMARY,id_curso_escolar
 
 ---
 
@@ -135,7 +98,7 @@
  Economía y Empresa | Lemke | Rutherford | Cristina
 ```
 
-⏱ Tiempo: 0.44 ms
+⏱ Tiempo: 0.46 ms
 ✅ Se usó índice(s) en la consulta: PRIMARY
 
 ---
@@ -144,46 +107,19 @@
 ```diff
 --- 
 +++ 
-@@ -1 +1,25 @@
+@@ -1 +1 @@
 -apellido1 | apellido2 | nombre
-+id | nif | nombre | apellido1 | apellido2 | ciudad | direccion | telefono | fecha_nacimiento | sexo | tipo
-+1.00 | 26902806M | Salvador | Sánchez | Pérez | Almería | C/ Real del barrio alto | 950254837 | 1991-03-28 | H | alumno
-+2.00 | 89542419S | Juan | Saez | Vega | Almería | C/ Mercurio | 618253876 | 1992-08-08 | H | alumno
-+3.00 | 11105554G | Zoe | Ramirez | Gea | Almería | C/ Marte | 618223876 | 1979-08-19 | M | profesor
-+4.00 | 17105885A | Pedro | Heller | Pagac | Almería | C/ Estrella fugaz | NULL | 2000-10-05 | H | alumno
-+5.00 | 38223286T | David | Schmidt | Fisher | Almería | C/ Venus | 678516294 | 1978-01-19 | H | profesor
-+6.00 | 04233869Y | José | Koss | Bayer | Almería | C/ Júpiter | 628349590 | 1998-01-28 | H | alumno
-+7.00 | 97258166K | Ismael | Strosin | Turcotte | Almería | C/ Neptuno | NULL | 1999-05-24 | H | alumno
-+8.00 | 79503962T | Cristina | Lemke | Rutherford | Almería | C/ Saturno | 669162534 | 1977-08-21 | M | profesor
-+9.00 | 82842571K | Ramón | Herzog | Tremblay | Almería | C/ Urano | 626351429 | 1996-11-21 | H | alumno
-+10.00 | 61142000L | Esther | Spencer | Lakin | Almería | C/ Plutón | NULL | 1977-05-19 | M | profesor
-+11.00 | 46900725E | Daniel | Herman | Pacocha | Almería | C/ Andarax | 679837625 | 1997-04-26 | H | alumno
-+12.00 | 85366986W | Carmen | Streich | Hirthe | Almería | C/ Almanzora | NULL | 1971-04-29 | M | profesor
-+13.00 | 73571384L | Alfredo | Stiedemann | Morissette | Almería | C/ Guadalquivir | 950896725 | 1980-02-01 | H | profesor
-+14.00 | 82937751G | Manolo | Hamill | Kozey | Almería | C/ Duero | 950263514 | 1977-01-02 | H | profesor
-+15.00 | 80502866Z | Alejandro | Kohler | Schoen | Almería | C/ Tajo | 668726354 | 1980-03-14 | H | profesor
-+16.00 | 10485008K | Antonio | Fahey | Considine | Almería | C/ Sierra de los Filabres | NULL | 1982-03-18 | H | profesor
-+17.00 | 85869555K | Guillermo | Ruecker | Upton | Almería | C/ Sierra de Gádor | NULL | 1973-05-05 | H | profesor
-+18.00 | 04326833G | Micaela | Monahan | Murray | Almería | C/ Veleta | 662765413 | 1976-02-25 | H | profesor
-+19.00 | 11578526G | Inma | Lakin | Yundt | Almería | C/ Picos de Europa | 678652431 | 1998-09-01 | M | alumno
-+20.00 | 79221403L | Francesca | Schowalter | Muller | Almería | C/ Quinto pino | NULL | 1980-10-31 | H | profesor
-+21.00 | 79089577Y | Juan | Gutiérrez | López | Almería | C/ Los pinos | 678652431 | 1998-01-01 | H | alumno
-+22.00 | 41491230N | Antonio | Domínguez | Guerrero | Almería | C/ Cabo de Gata | 626652498 | 1999-02-11 | H | alumno
-+23.00 | 64753215G | Irene | Hernández | Martínez | Almería | C/ Zapillo | 628452384 | 1996-03-12 | M | alumno
-+24.00 | 85135690V | Sonia | Gea | Ruiz | Almería | C/ Mercurio | 678812017 | 1995-04-13 | M | alumno
++apellido1 | apellido2 | nombre | id_departamento
 ```
 
-⏱ Tiempo: 0.32 ms
-🔍 No se usó ningún índice en esta consulta.
-
-🚨 **Problemas detectados:**
-⚠️ Evitar `SELECT *`. Usar solo las columnas necesarias.
+⏱ Tiempo: 0.41 ms
+✅ Se usó índice(s) en la consulta: PRIMARY
 
 ---
 
 ## ✅ Query 12: Correcto
 
-⏱ Tiempo: 0.34 ms
+⏱ Tiempo: 0.38 ms
 ✅ Se usó índice(s) en la consulta: id_departamento
 
 ---
@@ -209,7 +145,7 @@
  Schowalter | Muller | Francesca
 ```
 
-⏱ Tiempo: 0.36 ms
+⏱ Tiempo: 0.39 ms
 ✅ Se usó índice(s) en la consulta: id_profesor
 
 ---
@@ -218,7 +154,7 @@
 ```diff
 --- 
 +++ 
-@@ -1,63 +1,25 @@
+@@ -1,63 +1,63 @@
 -id | nombre
 -22.00 | Ingeniería de Requisitos
 -23.00 | Integración de las Tecnologías de la Información en las Organizaciones
@@ -282,38 +218,73 @@
 -81.00 | Genómica y proteómica
 -82.00 | Procesos biotecnológicos
 -83.00 | Técnicas instrumentales avanzadas
-+id | nif | nombre | apellido1 | apellido2 | ciudad | direccion | telefono | fecha_nacimiento | sexo | tipo
-+1.00 | 26902806M | Salvador | Sánchez | Pérez | Almería | C/ Real del barrio alto | 950254837 | 1991-03-28 | H | alumno
-+2.00 | 89542419S | Juan | Saez | Vega | Almería | C/ Mercurio | 618253876 | 1992-08-08 | H | alumno
-+3.00 | 11105554G | Zoe | Ramirez | Gea | Almería | C/ Marte | 618223876 | 1979-08-19 | M | profesor
-+4.00 | 17105885A | Pedro | Heller | Pagac | Almería | C/ Estrella fugaz | NULL | 2000-10-05 | H | alumno
-+5.00 | 38223286T | David | Schmidt | Fisher | Almería | C/ Venus | 678516294 | 1978-01-19 | H | profesor
-+6.00 | 04233869Y | José | Koss | Bayer | Almería | C/ Júpiter | 628349590 | 1998-01-28 | H | alumno
-+7.00 | 97258166K | Ismael | Strosin | Turcotte | Almería | C/ Neptuno | NULL | 1999-05-24 | H | alumno
-+8.00 | 79503962T | Cristina | Lemke | Rutherford | Almería | C/ Saturno | 669162534 | 1977-08-21 | M | profesor
-+9.00 | 82842571K | Ramón | Herzog | Tremblay | Almería | C/ Urano | 626351429 | 1996-11-21 | H | alumno
-+10.00 | 61142000L | Esther | Spencer | Lakin | Almería | C/ Plutón | NULL | 1977-05-19 | M | profesor
-+11.00 | 46900725E | Daniel | Herman | Pacocha | Almería | C/ Andarax | 679837625 | 1997-04-26 | H | alumno
-+12.00 | 85366986W | Carmen | Streich | Hirthe | Almería | C/ Almanzora | NULL | 1971-04-29 | M | profesor
-+13.00 | 73571384L | Alfredo | Stiedemann | Morissette | Almería | C/ Guadalquivir | 950896725 | 1980-02-01 | H | profesor
-+14.00 | 82937751G | Manolo | Hamill | Kozey | Almería | C/ Duero | 950263514 | 1977-01-02 | H | profesor
-+15.00 | 80502866Z | Alejandro | Kohler | Schoen | Almería | C/ Tajo | 668726354 | 1980-03-14 | H | profesor
-+16.00 | 10485008K | Antonio | Fahey | Considine | Almería | C/ Sierra de los Filabres | NULL | 1982-03-18 | H | profesor
-+17.00 | 85869555K | Guillermo | Ruecker | Upton | Almería | C/ Sierra de Gádor | NULL | 1973-05-05 | H | profesor
-+18.00 | 04326833G | Micaela | Monahan | Murray | Almería | C/ Veleta | 662765413 | 1976-02-25 | H | profesor
-+19.00 | 11578526G | Inma | Lakin | Yundt | Almería | C/ Picos de Europa | 678652431 | 1998-09-01 | M | alumno
-+20.00 | 79221403L | Francesca | Schowalter | Muller | Almería | C/ Quinto pino | NULL | 1980-10-31 | H | profesor
-+21.00 | 79089577Y | Juan | Gutiérrez | López | Almería | C/ Los pinos | 678652431 | 1998-01-01 | H | alumno
-+22.00 | 41491230N | Antonio | Domínguez | Guerrero | Almería | C/ Cabo de Gata | 626652498 | 1999-02-11 | H | alumno
-+23.00 | 64753215G | Irene | Hernández | Martínez | Almería | C/ Zapillo | 628452384 | 1996-03-12 | M | alumno
-+24.00 | 85135690V | Sonia | Gea | Ruiz | Almería | C/ Mercurio | 678812017 | 1995-04-13 | M | alumno
++nombre
++Ingeniería de Requisitos
++Integración de las Tecnologías de la Información en las Organizaciones
++Modelado y Diseño del Software 1
++Multiprocesadores
++Seguridad y cumplimiento normativo
++Sistema de Información para las Organizaciones
++Tecnologías web
++Teoría de códigos y criptografía
++Administración de bases de datos
++Herramientas y Métodos de Ingeniería del Software
++Informática industrial y robótica
++Ingeniería de Sistemas de Información
++Modelado y Diseño del Software 2
++Negocio Electrónico
++Periféricos e interfaces
++Sistemas de tiempo real
++Tecnologías de acceso a red
++Tratamiento digital de imágenes
++Administración de redes y sistemas operativos
++Almacenes de Datos
++Fiabilidad y Gestión de Riesgos
++Líneas de Productos Software
++Procesos de Ingeniería del Software 1
++Tecnologías multimedia
++Análisis y planificación de las TI
++Desarrollo Rápido de Aplicaciones
++Gestión de la Calidad y de la Innovación Tecnológica
++Inteligencia del Negocio
++Procesos de Ingeniería del Software 2
++Seguridad Informática
++Biologia celular
++Física
++Matemáticas I
++Química general
++Química orgánica
++Biología vegetal y animal
++Bioquímica
++Genética
++Matemáticas II
++Microbiología
++Botánica agrícola
++Fisiología vegetal
++Genética molecular
++Ingeniería bioquímica
++Termodinámica y cinética química aplicada
++Biorreactores
++Biotecnología microbiana
++Ingeniería genética
++Inmunología
++Virología
++Bases moleculares del desarrollo vegetal
++Fisiología animal
++Metabolismo y biosíntesis de biomoléculas
++Operaciones de separación
++Patología molecular de plantas
++Técnicas instrumentales básicas
++Bioinformática
++Biotecnología de los productos hortofrutículas
++Biotecnología vegetal
++Genómica y proteómica
++Procesos biotecnológicos
++Técnicas instrumentales avanzadas
 ```
 
-⏱ Tiempo: 0.31 ms
-🔍 No se usó ningún índice en esta consulta.
-
-🚨 **Problemas detectados:**
-⚠️ Evitar `SELECT *`. Usar solo las columnas necesarias.
+⏱ Tiempo: 0.36 ms
+✅ Se usó índice(s) en la consulta: id_profesor
 
 ---
 
@@ -321,76 +292,43 @@
 ```diff
 --- 
 +++ 
-@@ -1,10 +1,25 @@
--nombre
+@@ -1,5 +1,4 @@
+ nombre
 -Informática
--Matemáticas
--Economía y Empresa
--Educación
--Agronomía
--Química y Física
--Filología
--Derecho
--Biología y Geología
-+id | nif | nombre | apellido1 | apellido2 | ciudad | direccion | telefono | fecha_nacimiento | sexo | tipo
-+1.00 | 26902806M | Salvador | Sánchez | Pérez | Almería | C/ Real del barrio alto | 950254837 | 1991-03-28 | H | alumno
-+2.00 | 89542419S | Juan | Saez | Vega | Almería | C/ Mercurio | 618253876 | 1992-08-08 | H | alumno
-+3.00 | 11105554G | Zoe | Ramirez | Gea | Almería | C/ Marte | 618223876 | 1979-08-19 | M | profesor
-+4.00 | 17105885A | Pedro | Heller | Pagac | Almería | C/ Estrella fugaz | NULL | 2000-10-05 | H | alumno
-+5.00 | 38223286T | David | Schmidt | Fisher | Almería | C/ Venus | 678516294 | 1978-01-19 | H | profesor
-+6.00 | 04233869Y | José | Koss | Bayer | Almería | C/ Júpiter | 628349590 | 1998-01-28 | H | alumno
-+7.00 | 97258166K | Ismael | Strosin | Turcotte | Almería | C/ Neptuno | NULL | 1999-05-24 | H | alumno
-+8.00 | 79503962T | Cristina | Lemke | Rutherford | Almería | C/ Saturno | 669162534 | 1977-08-21 | M | profesor
-+9.00 | 82842571K | Ramón | Herzog | Tremblay | Almería | C/ Urano | 626351429 | 1996-11-21 | H | alumno
-+10.00 | 61142000L | Esther | Spencer | Lakin | Almería | C/ Plutón | NULL | 1977-05-19 | M | profesor
-+11.00 | 46900725E | Daniel | Herman | Pacocha | Almería | C/ Andarax | 679837625 | 1997-04-26 | H | alumno
-+12.00 | 85366986W | Carmen | Streich | Hirthe | Almería | C/ Almanzora | NULL | 1971-04-29 | M | profesor
-+13.00 | 73571384L | Alfredo | Stiedemann | Morissette | Almería | C/ Guadalquivir | 950896725 | 1980-02-01 | H | profesor
-+14.00 | 82937751G | Manolo | Hamill | Kozey | Almería | C/ Duero | 950263514 | 1977-01-02 | H | profesor
-+15.00 | 80502866Z | Alejandro | Kohler | Schoen | Almería | C/ Tajo | 668726354 | 1980-03-14 | H | profesor
-+16.00 | 10485008K | Antonio | Fahey | Considine | Almería | C/ Sierra de los Filabres | NULL | 1982-03-18 | H | profesor
-+17.00 | 85869555K | Guillermo | Ruecker | Upton | Almería | C/ Sierra de Gádor | NULL | 1973-05-05 | H | profesor
-+18.00 | 04326833G | Micaela | Monahan | Murray | Almería | C/ Veleta | 662765413 | 1976-02-25 | H | profesor
-+19.00 | 11578526G | Inma | Lakin | Yundt | Almería | C/ Picos de Europa | 678652431 | 1998-09-01 | M | alumno
-+20.00 | 79221403L | Francesca | Schowalter | Muller | Almería | C/ Quinto pino | NULL | 1980-10-31 | H | profesor
-+21.00 | 79089577Y | Juan | Gutiérrez | López | Almería | C/ Los pinos | 678652431 | 1998-01-01 | H | alumno
-+22.00 | 41491230N | Antonio | Domínguez | Guerrero | Almería | C/ Cabo de Gata | 626652498 | 1999-02-11 | H | alumno
-+23.00 | 64753215G | Irene | Hernández | Martínez | Almería | C/ Zapillo | 628452384 | 1996-03-12 | M | alumno
-+24.00 | 85135690V | Sonia | Gea | Ruiz | Almería | C/ Mercurio | 678812017 | 1995-04-13 | M | alumno
+ Matemáticas
+ Economía y Empresa
+ Educación
 ```
 
-⏱ Tiempo: 0.31 ms
-🔍 No se usó ningún índice en esta consulta.
-
-🚨 **Problemas detectados:**
-⚠️ Evitar `SELECT *`. Usar solo las columnas necesarias.
+⏱ Tiempo: 0.44 ms
+✅ Se usó índice(s) en la consulta: id_departamento, id_profesor
 
 ---
 
 ## ✅ Query 16: Correcto
 
-⏱ Tiempo: 0.34 ms
+⏱ Tiempo: 0.36 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 17: Correcto
 
-⏱ Tiempo: 0.32 ms
+⏱ Tiempo: 0.35 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 18: Correcto
 
-⏱ Tiempo: 0.35 ms
+⏱ Tiempo: 0.39 ms
 ✅ Se usó índice(s) en la consulta: id_departamento, PRIMARY
 
 ---
 
 ## ✅ Query 19: Correcto
 
-⏱ Tiempo: 0.34 ms
+⏱ Tiempo: 0.41 ms
 ✅ Se usó índice(s) en la consulta: id_departamento
 
 ---
@@ -407,7 +345,7 @@
  Grado en Ingeniería Agrícola (Plan 2015) | 0.00
 ```
 
-⏱ Tiempo: 0.35 ms
+⏱ Tiempo: 0.42 ms
 ✅ Se usó índice(s) en la consulta: id_grado
 
 ---
@@ -417,6 +355,56 @@
 SELECT g.nombre,COUNT(a.id) AS total FROM grado AS g LEFT JOIN asignat' at line 2
 
 
-## ❌ Query 22: Error
-- **Descripción**: 'NoneType' object is not iterable
+## ✅ Query 22: Correcto
 
+⏱ Tiempo: 0.40 ms
+✅ Se usó índice(s) en la consulta: id_grado, PRIMARY
+
+---
+
+## ✅ Query 23: Correcto
+
+⏱ Tiempo: 0.39 ms
+✅ Se usó índice(s) en la consulta: PRIMARY, id_curso_escolar
+
+---
+
+## ❌ Query 24: Incorrecto
+```diff
+--- 
++++ 
+@@ -2,12 +2,12 @@
+ 14.00 | Manolo | Hamill | Kozey | 11.00
+ 3.00 | Zoe | Ramirez | Gea | 10.00
+ 5.00 | David | Schmidt | Fisher | 0.00
+-15.00 | Alejandro | Kohler | Schoen | 0.00
+ 8.00 | Cristina | Lemke | Rutherford | 0.00
+-16.00 | Antonio | Fahey | Considine | 0.00
+ 10.00 | Esther | Spencer | Lakin | 0.00
+ 12.00 | Carmen | Streich | Hirthe | 0.00
++13.00 | Alfredo | Stiedemann | Morissette | 0.00
++15.00 | Alejandro | Kohler | Schoen | 0.00
++16.00 | Antonio | Fahey | Considine | 0.00
+ 17.00 | Guillermo | Ruecker | Upton | 0.00
+ 18.00 | Micaela | Monahan | Murray | 0.00
+-13.00 | Alfredo | Stiedemann | Morissette | 0.00
+ 20.00 | Francesca | Schowalter | Muller | 0.00
+```
+
+⏱ Tiempo: 0.40 ms
+✅ Se usó índice(s) en la consulta: PRIMARY,nif, id_profesor
+
+---
+
+## ❌ Query 25: Error
+- **Descripción**: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '--no coincideix ordre
+
+-- 25. Retorna totes les dades de l'alumne/a més jove. (' at line 1
+
+
+## ✅ Query 26: Correcto
+
+⏱ Tiempo: 0.39 ms
+✅ Se usó índice(s) en la consulta: id_profesor, PRIMARY
+
+---
