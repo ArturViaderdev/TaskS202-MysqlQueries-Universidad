@@ -1,26 +1,5 @@
 # 📌 Sprint 2.2: SQL Evaluator (Universidad)
 
-## How to Use the SQL Query Evaluator
-
-1. **Create a repository on GitHub**
-    - Use this repository as a _template_ and copy it to your account using the "Use this template" button.
-2. **Edit your queries directly on GitHub**
-    - In your repository, navigate to `queries/queries.sql`.
-    - Click **“Edit this file”** (the pencil icon) and paste each query below its corresponding statement.
-    - When you’re done, save the changes using “Commit changes” with a clear message.
-3. **Check the execution**
-    - The changes will be automatically applied to the main branch.
-    - GitHub Actions will detect the new commit and launch the workflow.
-4. **Review the results**
-    - Once the workflow has finished, a file named `RESULTADOS.md` will be generated in the main branch.
-    - Open it to see which queries passed or failed the tests.
-5. **Fix the issues**
-    - If any query is incorrect, edit `queries/queries.sql` again via GitHub’s web interface.
-    - Commit again and wait for `RESULTADOS.md` to regenerate.
-6. **Submit the link**
-    - Once all queries have been validated, copy and share your repository’s URL on Moodle.
-
-***
 Data alone doesn't explain anything. With SQL, you learn to ask the questions that reveal what really matters.
 
 ## Task Overview
@@ -95,3 +74,25 @@ Download the database from the **schema_universidad.sql** file, view the E-R dia
 ## Resources
 
 You can download the databases from the files shema_tienda.sql and schema_universidad.sql.
+
+***
+
+## How to Use the SQL Query Evaluator
+
+1. **Create a repository on GitHub**
+    - Use this repository as a _template_ and copy it to your account using the "Use this template" button.
+2. **Edit your queries directly on GitHub**
+    - In your repository, navigate to `queries/queries.sql`.
+    - Click **“Edit this file”** (the pencil icon) and paste each query below its corresponding statement.
+    - When you’re done, save the changes using “Commit changes” with a clear message.
+3. **Check the execution**
+    - The changes will be automatically applied to the main branch.
+    - GitHub Actions will detect the new commit and launch the workflow.
+4. **Review the results**
+    - Once the workflow has finished, a file named `RESULTADOS.md` will be generated in the main branch.
+    - Open it to see which queries passed or failed the tests.
+5. **Fix the issues**
+    - If any query is incorrect, edit `queries/queries.sql` again via GitHub’s web interface.
+    - Commit again and wait for `RESULTADOS.md` to regenerate.
+6. **Submit the link**
+    - Once all queries have been validated, copy and share your repository’s URL on Moodle.
