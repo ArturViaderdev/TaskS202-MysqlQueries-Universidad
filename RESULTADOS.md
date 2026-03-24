@@ -2,11 +2,11 @@
 
 
 ## 📈 Resumen
-✅ 16 correctas de 26 queries
+✅ 19 correctas de 26 queries
 
 ## ✅ Query 1: Correcto
 
-⏱ Tiempo: 0.47 ms
+⏱ Tiempo: 0.52 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -32,94 +32,55 @@
 
 ---
 
-## ❌ Query 5: Incorrecto
-```diff
---- 
-+++ 
-@@ -1,7 +1,7 @@
--id | nombre | cuatrimestre | curso | id_grado
--72.00 | Bases moleculares del desarrollo vegetal | 1.00 | 3.00 | 7.00
--73.00 | Fisiología animal | 1.00 | 3.00 | 7.00
--74.00 | Metabolismo y biosíntesis de biomoléculas | 1.00 | 3.00 | 7.00
--75.00 | Operaciones de separación | 1.00 | 3.00 | 7.00
--76.00 | Patología molecular de plantas | 1.00 | 3.00 | 7.00
--77.00 | Técnicas instrumentales básicas | 1.00 | 3.00 | 7.00
-+nombre
-+Bases moleculares del desarrollo vegetal
-+Fisiología animal
-+Metabolismo y biosíntesis de biomoléculas
-+Operaciones de separación
-+Patología molecular de plantas
-+Técnicas instrumentales básicas
-```
+## ✅ Query 5: Correcto
 
-⏱ Tiempo: 0.38 ms
+⏱ Tiempo: 0.39 ms
 ✅ Se usó índice(s) en la consulta: id_grado
 
 ---
 
 ## ✅ Query 6: Correcto
 
-⏱ Tiempo: 0.46 ms
-✅ Se usó índice(s) en la consulta: PRIMARY,id_departamento, PRIMARY
+⏱ Tiempo: 0.45 ms
+✅ Se usó índice(s) en la consulta: PRIMARY, PRIMARY,id_departamento
 
 ---
 
 ## ✅ Query 7: Correcto
 
-⏱ Tiempo: 0.63 ms
-✅ Se usó índice(s) en la consulta: PRIMARY,nif, PRIMARY,id_asignatura,id_curso_escolar, PRIMARY
+⏱ Tiempo: 0.66 ms
+✅ Se usó índice(s) en la consulta: PRIMARY, PRIMARY,nif, PRIMARY,id_asignatura,id_curso_escolar
 
 ---
 
 ## ✅ Query 8: Correcto
 
-⏱ Tiempo: 0.43 ms
-✅ Se usó índice(s) en la consulta: id_profesor,id_grado, PRIMARY,id_departamento, PRIMARY
+⏱ Tiempo: 0.41 ms
+✅ Se usó índice(s) en la consulta: PRIMARY, id_profesor,id_grado, PRIMARY,id_departamento
 
 ---
 
 ## ✅ Query 9: Correcto
 
-⏱ Tiempo: 0.40 ms
+⏱ Tiempo: 0.39 ms
 ✅ Se usó índice(s) en la consulta: PRIMARY, PRIMARY,id_curso_escolar
 
 ---
 
-## ❌ Query 10: Incorrecto
-```diff
---- 
-+++ 
-@@ -1,4 +1,4 @@
--departamento | apellido1 | apellido2 | nombre
-+nombre | apellido1 | apellido2 | nombre
- Agronomía | Monahan | Murray | Micaela
- Economía y Empresa | Fahey | Considine | Antonio
- Economía y Empresa | Lemke | Rutherford | Cristina
-```
+## ✅ Query 10: Correcto
 
-⏱ Tiempo: 0.46 ms
+⏱ Tiempo: 0.45 ms
 ✅ Se usó índice(s) en la consulta: PRIMARY
 
 ---
 
-## ❌ Query 11: Incorrecto
-```diff
---- 
-+++ 
-@@ -1 +1 @@
--apellido1 | apellido2 | nombre
-+apellido1 | apellido2 | nombre | id_departamento
-```
+## ❌ Query 11: Error
+- **Descripción**: 1054 (42S22): Unknown column 'pr' in 'field list'
 
-⏱ Tiempo: 0.41 ms
-✅ Se usó índice(s) en la consulta: PRIMARY
-
----
 
 ## ✅ Query 12: Correcto
 
-⏱ Tiempo: 0.38 ms
+⏱ Tiempo: 0.34 ms
 ✅ Se usó índice(s) en la consulta: id_departamento
 
 ---
@@ -145,7 +106,7 @@
  Schowalter | Muller | Francesca
 ```
 
-⏱ Tiempo: 0.39 ms
+⏱ Tiempo: 0.38 ms
 ✅ Se usó índice(s) en la consulta: id_profesor
 
 ---
@@ -283,7 +244,7 @@
 +Técnicas instrumentales avanzadas
 ```
 
-⏱ Tiempo: 0.36 ms
+⏱ Tiempo: 0.33 ms
 ✅ Se usó índice(s) en la consulta: id_profesor
 
 ---
@@ -307,43 +268,33 @@
 
 ## ✅ Query 16: Correcto
 
-⏱ Tiempo: 0.36 ms
+⏱ Tiempo: 0.32 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 17: Correcto
 
-⏱ Tiempo: 0.35 ms
+⏱ Tiempo: 0.33 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 18: Correcto
 
-⏱ Tiempo: 0.39 ms
-✅ Se usó índice(s) en la consulta: id_departamento, PRIMARY
+⏱ Tiempo: 0.37 ms
+✅ Se usó índice(s) en la consulta: PRIMARY, id_departamento
 
 ---
 
 ## ✅ Query 19: Correcto
 
-⏱ Tiempo: 0.41 ms
+⏱ Tiempo: 0.39 ms
 ✅ Se usó índice(s) en la consulta: id_departamento
 
 ---
 
-## ❌ Query 20: Incorrecto
-```diff
---- 
-+++ 
-@@ -1,4 +1,4 @@
--grau | total
-+nombre | total
- Grado en Ingeniería Informática (Plan 2015) | 51.00
- Grado en Biotecnología (Plan 2015) | 32.00
- Grado en Ingeniería Agrícola (Plan 2015) | 0.00
-```
+## ✅ Query 20: Correcto
 
 ⏱ Tiempo: 0.42 ms
 ✅ Se usó índice(s) en la consulta: id_grado
@@ -357,14 +308,14 @@ SELECT g.nombre,COUNT(a.id) AS total FROM grado AS g LEFT JOIN asignat' at line 
 
 ## ✅ Query 22: Correcto
 
-⏱ Tiempo: 0.40 ms
+⏱ Tiempo: 0.41 ms
 ✅ Se usó índice(s) en la consulta: id_grado, PRIMARY
 
 ---
 
 ## ✅ Query 23: Correcto
 
-⏱ Tiempo: 0.39 ms
+⏱ Tiempo: 0.40 ms
 ✅ Se usó índice(s) en la consulta: PRIMARY, id_curso_escolar
 
 ---
@@ -391,7 +342,7 @@ SELECT g.nombre,COUNT(a.id) AS total FROM grado AS g LEFT JOIN asignat' at line 
  20.00 | Francesca | Schowalter | Muller | 0.00
 ```
 
-⏱ Tiempo: 0.40 ms
+⏱ Tiempo: 0.39 ms
 ✅ Se usó índice(s) en la consulta: PRIMARY,nif, id_profesor
 
 ---
@@ -404,7 +355,7 @@ SELECT g.nombre,COUNT(a.id) AS total FROM grado AS g LEFT JOIN asignat' at line 
 
 ## ✅ Query 26: Correcto
 
-⏱ Tiempo: 0.39 ms
-✅ Se usó índice(s) en la consulta: id_profesor, PRIMARY
+⏱ Tiempo: 0.37 ms
+✅ Se usó índice(s) en la consulta: PRIMARY, id_profesor
 
 ---
